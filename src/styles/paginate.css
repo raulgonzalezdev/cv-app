@@ -1,0 +1,74 @@
+:root {
+  --primary: #1a29f3;
+  --greyLight: #3844f0;
+  --greyLight-2: #f8fffe;
+  --greyDark: #2d4848;
+}
+
+.paginate-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: var(--greyDark);
+}
+.paginate-container ul {
+  list-style-type: none;
+}
+
+.paginate-container .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 5rem;
+  margin: 3rem; */
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+}
+.paginate-container li a,
+.paginate-container .previous,
+li.break a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0.8rem; */
+  font-size: 12px;
+  cursor: pointer;
+}
+.paginate-container li.break a {
+  width: 2.6rem;
+  height: 2.6rem;
+  color: var(--greyLight);
+  cursor: initial;
+}
+.paginate-container li a {
+  width: 30px;
+  height: 25px;
+  border-radius: 100px;
+}
+.paginate-container li a:hover {
+  color: var(--primary);
+}
+.paginate-container li.selected {
+  color: #ffffff;
+  background: var(--primary);
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid var(--primary);
+}
+.paginate-container .previous,
+.paginate-container .next {
+  color: var(--greyLight);
+  pointer-events: none;
+  display: none;
+}
+.paginate-container .previous.selected,
+.paginate-container .next.selected {
+  color: var(--greyDark);
+  pointer-events: initial;
+}
+.paginate-container .previous.selected:hover,
+.paginate-container .next.selected:hover {
+  color: var(--primary);
+}

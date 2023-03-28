@@ -1,0 +1,101 @@
+/* actions buttons color */
+::root{
+  --fc-button-bg-color: white;
+  --fc-button-text-color: #222222;
+}
+
+.fc .fc-button {
+  border-radius: 4px;
+  background-color: white;
+  color: #222222;
+  border: 2px solid #F1EFF7;
+}
+
+.fc .fc-button-primary:hover, .fc-button-primary:active {
+  background-color: #F1EFF7 !important;
+  border: 2px solid #F1EFF7;
+  color: #222222 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+
+.fc-today-button, .fc-button-primary:focus  {
+  background-color: white !important;
+  color: #222222 !important;
+  border: 2px solid #F1EFF7 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.fc-today-button:hover {
+  background-color: #F1EFF7 !important;
+  color: #222222 !important;
+}
+
+.fc .fc-button:focus, .fc-button:focus-visible {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+/* month title */
+.fc-toolbar-title {
+  text-transform: capitalize;
+  font-family: Sora, Inter;
+  font-size: 16pt !important;
+}
+
+/* border-color */
+.fc-col-header-cell, 
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* header font */
+
+.fc-col-header-cell-cushion {
+  color: #7E7B86;
+  text-transform: capitalize;
+  font-weight: 100;
+  padding-bottom: 25px !important;
+  font-family: Sora, Inter;
+}
+
+/* day font */
+.fc-daygrid-day-number {
+  font-family: Sora, Inter;
+  font-size: 10pt;
+}
+
+/* calendar days line-height */
+.fc-theme-standard td, .fc-theme-standard th {
+  line-height: 10pt
+}
+
+/* event title padding */
+.fc-event-title {
+  padding: 5px 8px !important;
+  font-size: 10pt;
+}
+
+/* day grid more link */
+.fc-daygrid-more-link {
+  text-decoration: underline;
+  padding: 6px;
+  color: #222;
+}
+
+.fc .fc-daygrid-event {
+  margin: 4px 0 0 0;
+}
+
+div.fc-event-main div.chakra-stack {
+  display: block;
+}
+
+@media (min-width:1280px) {
+  div.fc-event-main div.chakra-stack {
+    display: flex;
+  }
+}

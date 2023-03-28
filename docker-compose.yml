@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: client
+    #image: reveal-client:lastest
+    hostname: reveal-client
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+
+
+    # container_name: reveal-client
+    # image: reveal-client-2:latest
+    # hostname: reveal-client
+    # ports:
+    #     - 3000:3000
+
+
+    restart: on-failure
+    networks:
+      - estate-react
+
+
+
+networks:
+  estate-react:
+    driver: bridge
+
+volumes:
+
+  static_volume:
+  media_volume:
